@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface BankRepository extends JpaRepository<Bank, Long> {
-    @Query("SELECT e FROM Bank e WHERE e.email = ?1")
+    @Query("SELECT e FROM Bank e WHERE e.email = ?1") // particular column's email = input, then we select that column
     Optional<Bank> findByEmail(String email);
 
     @Query("SELECT p FROM Bank p WHERE p.email = ?1")
