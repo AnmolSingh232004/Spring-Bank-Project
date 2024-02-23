@@ -26,6 +26,8 @@ public class BankService {
         if (optionalEmail.isPresent() || optionalPhoneNumber.isPresent()) {
             throw new IllegalArgumentException("Email or phone number already exists.");
         } else {
+            if (bank.getPhoneNumber() < 999999999L || bank.getPhoneNumber() > 10000000000L)throw new IllegalArgumentException("Invalid Number");
+            bank.setBalance(0L);
             bankRepository.save(bank);
         }
     }

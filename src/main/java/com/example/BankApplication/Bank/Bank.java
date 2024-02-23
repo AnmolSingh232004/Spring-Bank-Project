@@ -36,6 +36,7 @@ public class Bank {
     public Bank() {
     }
     public Bank(String name, String email, Long phoneNumber) {
+        if (phoneNumber < 999999999L || phoneNumber > 10000000000L)throw new IllegalArgumentException("Invalid Number");
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
