@@ -14,12 +14,16 @@ public class BankController {
     public BankController(BankService bankService) {
         this.bankService = bankService;
     }
-
     @GetMapping
+    public String Welcome() {
+        return "Welcome user.";
+    }
+
+    @GetMapping(path = "/accounts")
     public List<Bank> totalAccounts() {
         return bankService.getAccounts();
     }
-    @PostMapping
+    @PostMapping(path = "/accounts")
     public void addAccount(@RequestBody Bank account) {
         bankService.addAccountService(account);
     }

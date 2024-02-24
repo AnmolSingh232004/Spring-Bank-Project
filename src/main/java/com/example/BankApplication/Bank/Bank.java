@@ -11,7 +11,7 @@ public class Bank {
     @SequenceGenerator(
             name = "account_sequence",
             sequenceName = "account_sequence",
-            initialValue =  69,
+            initialValue =  1,
             allocationSize = 1
     )
     @GeneratedValue(
