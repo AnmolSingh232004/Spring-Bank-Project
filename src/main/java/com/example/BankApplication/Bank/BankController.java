@@ -23,7 +23,7 @@ public class BankController {
     public List<Bank> totalAccounts() {
         return bankService.getAccounts();
     }
-    @PostMapping(path = "/accounts")
+    @PostMapping(path = "/accounts/add")
     public void addAccount(@RequestBody Bank account) {
         bankService.addAccountService(account);
     }

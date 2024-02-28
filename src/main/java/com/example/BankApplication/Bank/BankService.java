@@ -4,10 +4,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class BankService {
@@ -26,7 +23,8 @@ public class BankService {
         if (optionalEmail.isPresent() || optionalPhoneNumber.isPresent()) {
             throw new IllegalArgumentException("Email or phone number already exists.");
         } else {
-            if (bank.getPhoneNumber() < 999999999L || bank.getPhoneNumber() > 10000000000L)throw new IllegalArgumentException("Invalid Number");
+            if (bank.getPhoneNumber() < 999999999L || bank.getPhoneNumber() > 10000000000L)
+                throw new IllegalArgumentException("Invalid Number");
             bank.setBalance(0L);
             bankRepository.save(bank);
         }
