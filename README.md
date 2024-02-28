@@ -29,8 +29,6 @@ The uri for updating accounts(put) is http://localhost:8080/api/v1/Bank/1/update
 The uri for adding money(put) is http://localhost:8080/api/v1/Bank/1/add-money?money=5000
 The uri for withdrawing money(put) is http://localhost:8080/api/v1/Bank/1/withdraw?money=5000
 
-NOTE ** ALL PAGES EXCEPT WELCOME PAGE REQUIRES AUTHENTICATION, DEFAULT USER ID is Test and Password is TestPassword
-
 In all put methods /1/ is merely the user id change the user id for updating different accounts.
 An application like postman can be used to test all these apis(They have been thoroughly tested before).
 
