@@ -1,3 +1,5 @@
+Project Overview
+
 This project is a Java-Spring-Boot based project.
 It simulates a bank having capabilities to add, remove, update bank accounts.
 It uses PostgreSQL to store bank accounts.
@@ -10,7 +12,9 @@ phoneNumber (can not be repeated),
 balance (with proper logic for withdrawl and adding money)
 *************************************************************************************************
 How to run this application?
+
 There are 2 ways. 
+
 Method 1 : go to any terminal such as cmd in windows and navigate to the folder where BankApplication is
 And go to the target folder then type in java
 -jar BankApplication-0.0.1-SNAPSHOT.jar (Default Port)
@@ -22,17 +26,26 @@ This will run the application in background, you won't see it running directly b
 task manager(Tasks).
 
 Now you can enter in uri followed by your port number which by default is 8080 
+
 The uri for welcome page(get) is http://localhost:8080/api/v1/Bank
+
 The uri for viewing saved accounts(get) is http://localhost:8080/api/v1/Bank/accounts
+
 The uri for adding account(post) is http://localhost:8080/api/v1/Bank/accounts/add
+
 The uri for updating accounts(put) is http://localhost:8080/api/v1/Bank/1/update?email=yourmail&phoneNumber=yourNumber
+
 The uri for adding money(put) is http://localhost:8080/api/v1/Bank/1/add-money?money=5000
+
 The uri for withdrawing money(put) is http://localhost:8080/api/v1/Bank/1/withdraw?money=5000
 
 In all put methods /1/ is merely the user id change the user id for updating different accounts.
+
 An application like postman can be used to test all these apis(They have been thoroughly tested before).
 
 *************************************************************************************************
+Bug Fixes                       
+
 Added logging capabilities in second push.
 
 Bug found 2024/02/24
